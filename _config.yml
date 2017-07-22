@@ -1,7 +1,7 @@
 title:            CAIS++
 description:      "The Official Blog"
-logo:             logo3.png
-disqus_shortname: hmfaysal
+logo:             caislogo.png
+disqus_shortname: cais
 share:            true
 # Change url to your domain. Leave localhost server or blank when working locally.
 # or use the hint from http://jekyllrb.com/docs/github-pages/ to keep this the same
@@ -11,7 +11,7 @@ url:        	  https://caisplusplus.github.io/caispluplus.github.io/
 # Owner/author information
 owner:
   name:           CAIS++
-  avatar:
+  avatar:         globe.png
   email:          caisplus@usc.edu
   # Use the coder's toolbox at http://coderstoolbox.net/string/#!encoding=xml&action=encode&charset=us_ascii to encode your description into XML string
   description:    USC Center for AI in Society Student Branch
