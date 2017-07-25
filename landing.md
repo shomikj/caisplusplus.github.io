@@ -8,4 +8,11 @@ description: "An archive of posts sorted by categories."
 
 ---
 
+<html>
+<p>
 Dyanmic!
+</p>
+<p>
+  COol
+</p>
+</html>
