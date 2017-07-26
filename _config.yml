@@ -1,5 +1,5 @@
 title:            CAIS++
-description:      "The Official Blog"
+description:      "Official Blog"
 logo:             caislogonewred.png
 logowhite:        caislogowhite.png
 disqus_shortname: cais
@@ -32,8 +32,8 @@ bing_verify:
 # Links to include in footer navigation
 # For external links add external: true
 links:
-  - title: Home
-    url: /
+  - title: Blog Home
+    url: /blog/
     external: false
     icon: home
   - title: Featured Posts
