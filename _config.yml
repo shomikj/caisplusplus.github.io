@@ -74,8 +74,8 @@ kramdown:
 
 prose:
   rooturl: '_posts'
-  siteurl: 'https://caisplusplus.github.io/blog'
-  relativeLinks: 'https://caisplusplus.github.io/blog/links.jsonp'
+  siteurl: 'https://caisplusplus.github.io'
+  relativeLinks: 'https://caisplusplus.github.io/links.jsonp'
   media: 'images'
   metadata:
     _posts:
