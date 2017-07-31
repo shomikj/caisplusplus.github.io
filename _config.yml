@@ -1,5 +1,5 @@
 title:            CAIS++
-description:      "Official Blog"
+description:      "Student Blog"
 logo:             caislogonewred.png
 logowhite:        caislogowhite.png
 disqus_shortname: cais
@@ -19,7 +19,7 @@ owner:
   # Social networking links used in footer. Update and remove as you like.
   twitter:
   facebook: groups/173750813090965/
-  github:
+  github: /caisplusplus
   instagram:
   # For Google Authorship https://plus.google.com/authorship
 
