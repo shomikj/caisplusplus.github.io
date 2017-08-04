@@ -5,7 +5,7 @@ title: "Lesson 4 Supplemental Material"
 headline: ""
 mathjax: true
 featured: false
-categories: curriculum 
+categories: curriculum-supplement
 
 comments: false
 ---
