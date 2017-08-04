@@ -24,7 +24,8 @@ owner:
   # For Google Authorship https://plus.google.com/authorship
 
 # Analytics and webmaster tools stuff goes here
-google_analytics:
+google_analytics: UA-104062474-1
+# Already taken care of this with the google[crazy number].html file
 google_verify:
 # https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
 bing_verify:
@@ -37,11 +38,11 @@ links:
     external: false
     icon: home
   - title: Featured Posts
-    url: /featured
+    url: /blog/featured
   - title: Categories
-    url: /categories
+    url: /blog/categories
   - title: About
-    url: /about
+    url: /blog/about
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:    America/Los_Angeles
@@ -55,7 +56,7 @@ paginate:    5
 paginate_path: "/blog/page:num"
 
 # https://github.com/mojombo/jekyll/wiki/Permalinks
-permalink:   /:categories/:title
+permalink:   /blog/:categories/:title
 
 kramdown:
   auto_ids: true
