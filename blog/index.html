@@ -29,8 +29,8 @@ description: "USC Center for AI in Society Student Branch"
 	{% endfor %}
     <nav class="pagination" role="navigation">
     {% if paginator.previous_page %}
-	    {% if paginator.previous_page == 1 %}
-        <!-- Manually inserted "/blog/" Into URL to fix pagination -->
+	    <!-- Manually inserted "/blog/" Into URL to fix pagination -->
+        {% if paginator.previous_page == 1 %}
 	    <a class="newer-posts" href="{{ site.url }}/blog/"><i class="fa fa-chevron-left"></i> Newer</a>
 	    {% else %}
 	    <a class="newer-posts" href="{{ site.url }}/blog/page{{ paginator.previous_page }}"><i class="fa fa-chevron-left"></i> Newer</a>

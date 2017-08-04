@@ -20,12 +20,12 @@ comments: false
 
 <h2><a name="backpropagation"></a>Backpropagation</h2>
 
-<p>
-  In this section, we will generalize the results from the [one-layer training case](../curriculum-supplement/lesson4supplement) to
-  any number of layers in our network and any activation functions. This will
-  form the backpropagation algorithm which is used to train the parameters of a
-  neural network.
-</p>
+
+In this section, we will generalize the results from the [one-layer training case](../curriculum-supplement/lesson4supplement) to
+any number of layers in our network and any activation functions. This will
+form the backpropagation algorithm which is used to train the parameters of a
+neural network.
+
 
 <p>
   With our previous network, we were able to show that a single neuron network
