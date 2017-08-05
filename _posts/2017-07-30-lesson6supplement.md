@@ -4,7 +4,7 @@ published: true
 title: "Lesson 6 Supplemental Material"
 headline: ""
 mathjax: true
-featured: true
+featured: false
 categories: curriculum-supplement
 
 comments: false
