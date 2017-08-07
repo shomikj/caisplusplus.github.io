@@ -318,7 +318,7 @@ Where we have:
   into the <i>softmax classification function</i>.
 </p>
 
-<h3>Softmax Classifier</h3>
+<h3><a name="softmax"></a>Softmax Classifier</h3>
 
 <p>
   Let's say you are building a neural network to classify between two classes.
