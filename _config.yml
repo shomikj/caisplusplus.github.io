@@ -17,10 +17,10 @@ owner:
   # Use the coder's toolbox at http://coderstoolbox.net/string/#!encoding=xml&action=encode&charset=us_ascii to encode your description into XML string
   description:    USC Center for AI in Society's Student Branch
   # Social networking links used in footer. Update and remove as you like.
-  twitter:
+  twitter: caisplusplus
   facebook: groups/173750813090965/
   github: /caisplusplus
-  instagram:
+  instagram: CAISplusplus
   # For Google Authorship https://plus.google.com/authorship
 
 # Analytics and webmaster tools stuff goes here
