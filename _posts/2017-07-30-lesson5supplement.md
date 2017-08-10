@@ -626,7 +626,7 @@ Where we have:
   dataset. 
 </p>
 
-<h3>Ensemble Methods</h3>
+<h3><a name="ensemble"></a>Ensemble Methods</h3>
 <p>
   <i>Bagging</i> (short for bootstrap aggregation, a term in statistics) is the
   technique of making a model generalize better by combining multiple weaker
