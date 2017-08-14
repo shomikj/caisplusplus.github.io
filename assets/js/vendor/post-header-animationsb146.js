@@ -146,7 +146,7 @@
         window.addEventListener('scroll', function() {
             // if the current time in milliseconds - timeNow is
             // less than 250, abort.
-            if((+new Date() - timeNow) < 1000) return;
+            if((+new Date() - timeNow) < 250) return;
             // Else, reset timeNow to now.
             timeNow = +new Date();
             scrollPage()
