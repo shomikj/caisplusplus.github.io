@@ -7,7 +7,7 @@ mathjax: true
 featured: false
 categories: curriculum-supplement
 
-comments: false
+comments: true
 ---
 
 
@@ -34,7 +34,7 @@ comments: false
   overlap of functions \( x \) and \( w \). In the below image the green curve
   is the value of the convolution \( f * g \), the red is \( f \), the blue \(
   g \) and the shaded area is the product \( f(a) g(t - a) \) where \( t \) is
-  the x-axis. 
+  the x-axis.
 </p>
 
 <img class='center-image' src='/assets/img/ml/cnn/convgaus.gif' />
@@ -42,7 +42,7 @@ comments: false
 <p>
   The first argument to the convolution (in the example the function \(x(t)\))
   is the input to the function and the second (in the example the function \(
-  w(t) \) ) is referred to as the kernel. 
+  w(t) \) ) is referred to as the kernel.
 </p>
 
 <p>
@@ -59,7 +59,7 @@ comments: false
 
 <p>
   Furthermore, images are two dimensional so we must apply the convolution to
-  a two dimensional function. 
+  a two dimensional function.
   $$
   S(i, j) = (I * K)(i, j) = \sum_{m} \sum_{n} I(m,n) K(i - m, j - n)
   $$

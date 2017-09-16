@@ -5,23 +5,23 @@ title: "Environment Setup"
 headline: "Preparation makes perfect"
 mathjax: true
 featured: true
-categories: curriculum 
+categories: curriculum
 
-comments: false
+comments: true
 ---
 
 <p>
   Before getting into the actual programming lessons, we first need to set up our
-  coding environment. 
+  coding environment.
 </p>
 
 <p>
   <b>Python</b> is the most popular tool for machine learning, and it is what
   we will be using throughout this curriculum. Now you might be wondering: why
   use Python, a high level programming language, for machine learning?
-  Wouldn't things run faster if we used C++? 
+  Wouldn't things run faster if we used C++?
 </p>
-  
+
 <p>
   It turns out, we can run our machine learning programs in Python just as fast
   as we could in C++ -- and the simplicity of Python makes it an attractive
@@ -35,7 +35,7 @@ comments: false
   interface for fast deep learning operations that can be performed on either the CPU
   or GPU (the GPU is a <b>lot</b> faster at matrix multiplications than the
   CPU, making it valuable for deep learning applications). Finally, we will
-  also install <b>scikit-learn</b>: a general machine learning package for Python. 
+  also install <b>scikit-learn</b>: a general machine learning package for Python.
 </p>
 
 <p>
@@ -63,7 +63,7 @@ comments: false
    through <code class='language-bash'>activate caispp</code> on Windows or
    <code class='language-bash'>source activate caispp</code> on Unix systems.
    You should see your prompt change with the name of the environment to the
-   left of the input line. 
+   left of the input line.
 5. Make sure that **pip** is installed by running <code class='language-bash'>pip
    -v</code>. Pip is an easy-to-use package manager built for Python, and we will use it to install several of the packages we will need in the future.
    If pip is not installed, follow the instructions <a
@@ -86,8 +86,5 @@ comments: false
 </p>
 
 <p>
-  That's it for now! If you have any questions, or if any of these instructions do not work, please email us at caisplus@usc.edu. Chances are some of you will run into the same problems, so we want to update this lesson with any trouble shooting advice we can get. 
+  That's it for now! If you have any questions, or if any of these instructions do not work, please email us at caisplus@usc.edu. Chances are some of you will run into the same problems, so we want to update this lesson with any trouble shooting advice we can get.
 </p>
-
-
-

@@ -7,7 +7,7 @@ mathjax: true
 featured: false
 categories: curriculum-supplement
 
-comments: false
+comments: true
 ---
 
 
@@ -21,14 +21,14 @@ comments: false
 <img class='center-image' src='/assets/img/ml/crash_course/adaline_two_input.png' />
 
 <p>
-  Now let's use our network to classify generic inputs 
+  Now let's use our network to classify generic inputs
   \(   \begin{bmatrix}
     \textbf{p}_1 \\
-    \textbf{p}_2 
+    \textbf{p}_2
   \end{bmatrix} \). We can begin to construct this classifier by saying that
   for any output \( a > 0 \) the input can be categorized as class one and for any output \( a \le
   0\) the input can be categorized as class two. We can find the decision
-  boundary by setting the equation of the network equal to zero. 
+  boundary by setting the equation of the network equal to zero.
   $$ \textbf{wp} + b = 0 $$
   $$ w_1 p_1 + w_2 p_2 + b = 0$$
   $$ w_2 p_2 = - w_1 p_1 - b $$
@@ -51,7 +51,7 @@ comments: false
   We will now discover an algorithm that can be used to find the line to best
   separate data points. Take the example below where a line is discovered to
   best separate the blue and the red data points. We want to algorithmically
-  find this line. 
+  find this line.
 </p>
 
 <img class='center-image' src='/assets/img/ml/crash_course/linear_class.png' />
@@ -63,12 +63,12 @@ comments: false
   \begin{bmatrix}
     \textbf{w} \\
     b
-  \end{bmatrix} \) and \( \textbf{x} = 
+  \end{bmatrix} \) and \( \textbf{x} =
   \begin{bmatrix}
     \textbf{p} \\
     1
   \end{bmatrix} \) notice that the dot product of these two vectors gives the
-  same result as before 
+  same result as before
 
   $$ a = \textbf{x}^T \textbf{z} = \textbf{wp} + b $$
 
@@ -140,18 +140,18 @@ comments: false
   $$ \nabla J(\textbf{x}) = \nabla e^{2} (k) $$
 
   Where \( k \) is the iteration number. Instead of computing the expected
-  value of the squared error we are approximating it at some iteration \( k \) 
+  value of the squared error we are approximating it at some iteration \( k \)
   This approximation of the gradient is called stochastic gradient. And
   we descend the gradient looking for the minimum, giving rise to the important term in machine learning
   called <b>Stochastic Gradient Descent (SGD)</b>. Our derivatives are with respect to
-  the network parameters, the bias and the weights. 
+  the network parameters, the bias and the weights.
 </p>
 
 <p>
   As there are many weights for our neuron, the following expression gives the
   gradient of our term evaluated at the arbitrary weight \( j \). Say there are
   \( R \) inputs (and therefore weights) to this neuron we are considering.
-  
+
   $$ [ \nabla e^2(k) ]_j = \frac{\partial e^2 (k)}{\partial w_j} $$
 
   We can then apply the chain rule.
@@ -165,13 +165,13 @@ comments: false
 </p>  
 
 <p>
-  Now evaluate the term \( \frac{\partial e(k)}{\partial w_j} \) 
+  Now evaluate the term \( \frac{\partial e(k)}{\partial w_j} \)
 
-  $$ \frac{\partial e(k)}{\partial w_j} = \frac{\partial (t(k) - 
+  $$ \frac{\partial e(k)}{\partial w_j} = \frac{\partial (t(k) -
   a(k))}{\partial w_j}  = \frac{\partial}{\partial w_j} ( t(k) - (\textbf{w}^T
   \textbf{p}(k) + b))$$
 
-  \(p_i(k)\) is \( i \)th element of the input at the \( k \)th iteration. 
+  \(p_i(k)\) is \( i \)th element of the input at the \( k \)th iteration.
 
   $$ \frac{\partial}{\partial w_j} \left( t(k) - \left( \sum_{i=1}^{R} w_i
   p_i(k) +b \right) \right) $$
@@ -187,24 +187,24 @@ comments: false
 
   When taking the derivative of the expression with respect to the bias \( b
   \), we can see the only term dependent on \( b \) is \( b \) itself. This
-  just gives \( 1 \). 
+  just gives \( 1 \).
 
   $$ \frac{\partial e(k)}{\partial b} = -1 $$
 </p>
 
 <p>
   To simplify writing the final formula let's go back to our previous notation
-  of using \( \textbf{z} \) to represent the parameters of the network. 
-  $$ 
-  \textbf{z}(k) = 
+  of using \( \textbf{z} \) to represent the parameters of the network.
+  $$
+  \textbf{z}(k) =
   \begin{bmatrix}
     p_j(k) \\
     1
-  \end{bmatrix} 
+  \end{bmatrix}
   $$
 
   We can now rewrite the original equation for the gradient of the squared
-  error. 
+  error.
 
   $$ \nabla J(\textbf{x}) = \nabla e^2 (k) = -2e(k)\textbf{z}(k) $$
 
@@ -225,7 +225,7 @@ comments: false
 <p>
   $$ \textbf{x}_{k+1} = \textbf{x}_k + 2 \alpha e(k) \textbf{z}(k) $$
 
-  We say that \( \alpha \) is the learning rate. 
+  We say that \( \alpha \) is the learning rate.
   This can then be split up into the weight and bias update terms.
 
   $$ \textbf{w}(k+1) = \textbf{w}(k) + 2\alpha e(k) \textbf{p}(k) $$
@@ -248,7 +248,7 @@ comments: false
 
   Where \( e_{i} \) is the error of the \( i \)th row of the error in the
   layer's output. And then we can just write it in matrix form to clean things
-  up. 
+  up.
 
   $$ \textbf{W}(k+1) = \textbf{W}(k) + 2\alpha \textbf{e}(k) \textbf{p}(k) $$
   $$ \textbf{b}(k+1) = \textbf{b}(k) + 2\alpha \textbf{e}(k) $$
@@ -259,5 +259,5 @@ comments: false
   would be able to converge to optimal network parameters. However, we are limited to
   single layer networks and linear activation functions. In the next section we
   will examine how to generalize this to any number of layers and any
-  activation function. 
+  activation function.
 </p>

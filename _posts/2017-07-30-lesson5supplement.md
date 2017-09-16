@@ -7,7 +7,7 @@ mathjax: true
 featured: false
 categories: curriculum-supplement
 
-comments: false
+comments: true
 ---
 
 <h2><a name="backpropagation"></a>Backpropagation Proof</h2>
@@ -46,7 +46,7 @@ neural network.
 <p>
   By the same logic as with the single layer we have the following where \( m
   \) is the layer index. Except this time calculating the derivatives is more
-  complex. 
+  complex.
 
   $$ w_{i,j}^{m}(k+1) = w_{i,j}^{m}(k) - \alpha \frac{ \partial J}{\partial
   w_{i,j}^{m}} $$
@@ -56,19 +56,19 @@ neural network.
 </p>
 
 <p>
-  Let's go ahead and employ the chain rule of calculus. Remember that 
-  ignoring the bias, the product of the input and the weights is given by 
-  \( n_{i}^{m} = w_{i}^{m} * p_{i}^{m} \). 
+  Let's go ahead and employ the chain rule of calculus. Remember that
+  ignoring the bias, the product of the input and the weights is given by
+  \( n_{i}^{m} = w_{i}^{m} * p_{i}^{m} \).
   This can be written as a function of the weights of the layer.
   Let's apply the chain rule knowing that \( n_{i}^{m} \) can be written as \(
-  n_{i}^{m} ( w_{i,j} ) \). 
+  n_{i}^{m} ( w_{i,j} ) \).
 
-  $$ 
+  $$
   \frac{ \partial J}{\partial w_{i,j}^{m}} = \frac{\partial J}{\partial
   n_{i}^{m}} * \frac{\partial n_{i}^{m}}{\partial w_{i,j}^{m}}
   $$
 
-  $$ 
+  $$
   \frac{ \partial J}{\partial b_{i}^{m}} = \frac{\partial J}{\partial n_{i}^{m}} *
   \frac{\partial n_{i}^{m}}{\partial b_{i}^{m}} $$
 </p>
@@ -97,14 +97,14 @@ neural network.
 
   $$ b_{i}^{m}(k+1) = b_{i}^{m}(k) - \alpha s_{i}^{m} $$
 
-  Which in matrix form becomes: 
+  Which in matrix form becomes:
   $$ \textbf{W}^{m}(k+1) = \textbf{W}^{m}(k) - \alpha \textbf{s}^{m}
   (\textbf{a}^{m-1})^{T} $$
 
   $$ \textbf{b}^{m}(k+1) = \textbf{b}^{m}(k) - \alpha \textbf{s}^{m} $$
 
 Where we have:
-  $$\textbf{s}^{m} = \frac{\partial J}{\partial n^{m}} = 
+  $$\textbf{s}^{m} = \frac{\partial J}{\partial n^{m}} =
   \begin{bmatrix}
     \frac{\partial J}{\partial n_{1}^{m}} \\
     \frac{\partial J}{\partial n_{2}^{m}} \\
@@ -114,15 +114,15 @@ Where we have:
 </p>
 
 <p>
-  The goal of backpropagation equations is to come up with an expression for 
+  The goal of backpropagation equations is to come up with an expression for
   \( \textbf{s}^{m} \) in terms of \( \textbf{s}^{m-1} \). To get to our result
-  we first have to do some math magic so bear with me. 
+  we first have to do some math magic so bear with me.
 </p>
 
 <p>
   Consider the following matrix: (This is called a Jacobian matrix)
   $$
-  \frac{\partial \textbf{n}^{m+1}}{\partial \textbf{n}^{m}} = 
+  \frac{\partial \textbf{n}^{m+1}}{\partial \textbf{n}^{m}} =
   \begin{bmatrix}
     \frac{\partial n_{1}^{m+1}}{\partial n_{1}^{m}} &&
     \frac{\partial n_{1}^{m+1}}{\partial n_{2}^{m}} &&
@@ -134,8 +134,8 @@ Where we have:
     \dots &&
     \frac{\partial n_{2}^{m+1}}{\partial n_{S^{m}}^{m}} \\
 
-    \vdots && 
-    \vdots && 
+    \vdots &&
+    \vdots &&
     &&
     \vdots \\
 
@@ -151,13 +151,13 @@ Where we have:
   \). Let's look at some arbitrary element in this matrix and see if we can simplify
   it.
   $$
-    \frac{\partial n_{i}^{m+1}}{\partial n_{j}^{m}} = \frac{ \partial \left( \sum_{l=1}^{S^{m}} 
+    \frac{\partial n_{i}^{m+1}}{\partial n_{j}^{m}} = \frac{ \partial \left( \sum_{l=1}^{S^{m}}
     w_{i,l}^{m + 1} a_{j}^{m} + b_{i}^{m + 1} \right) }{\partial n_{j}^{m}} =
     \frac{\partial (w_{i,j}^{m} * a_{j}^{m}(n_{j}^{m}))}{\partial n_{j}^{m}} = w_{i,j}^{m} \frac{\partial
     a_{j}^{m}(n_{j}^{m})}{\partial n_{j}^{m}}
-  $$ 
+  $$
 
-  But we know the explicit formula for \( a_{j}^{m} \) ! 
+  But we know the explicit formula for \( a_{j}^{m} \) !
   $$ a_{j}^{m} (n_{j}^{m}) = f^{m}(n_{j}^{m})$$
 
   Where \( f^{m} \) is the activation function for layer \( m \).
@@ -166,18 +166,18 @@ Where we have:
   \frac{\partial n_{i}^{m+1}}{\partial n_{j}^{m}} = w_{i,j}^{m} \frac{\partial
     f^{m}(n_{j}^{m})}{\partial n_{j}^{m}} = w_{i,j}^{m} D^m(n_{j}^{m})
   $$
-  
+
   Where we have \( \frac{\partial f^{m}(n_{j}^{m})}{\partial n_{j}^{m}} =
   D^m(n_{j}^{m}) \) just to make the notation look easier. Note that \(
   d^m(n_j^m) \) is evaluating the derivative of \( f^m \) for the value \(
-  n_j^m \). Doing this is easy for computers. 
+  n_j^m \). Doing this is easy for computers.
 </p>
 
 <p>
   Now we have an explicit expression for \( \frac{\partial
-  n_{i}^{m+1}}{\partial n_{j}^{m}} \) 
+  n_{i}^{m+1}}{\partial n_{j}^{m}} \)
 
-  $$ 
+  $$
   \frac{\partial \textbf{n}^{m+1}}{\partial \textbf{n}^{m}} = \textbf{W}^{m +
   1} \textbf{D}^m (\textbf{n}^{m})
   $$
@@ -185,30 +185,30 @@ Where we have:
 
 <p>
   Simplify the original sensitivity term.
-  $$ 
-  \textbf{s}^{m} = \frac{\partial J}{\partial \textbf{n}^{m}} = 
+  $$
+  \textbf{s}^{m} = \frac{\partial J}{\partial \textbf{n}^{m}} =
   \left( \frac{\partial \textbf{n}^{m+1}}{\partial \textbf{n}^{m}} \right)^{T}
   \frac{\partial J}{\partial \textbf{n}^{m + 1}}
   $$
   $$
-  \textbf{s}^{m} = 
-  \left( \textbf{W}^{m + 1} \textbf{D}^m (\textbf{n}^{m}) \right)^{T} 
-  \frac{\partial J}{\partial \textbf{n}^{m + 1}} 
+  \textbf{s}^{m} =
+  \left( \textbf{W}^{m + 1} \textbf{D}^m (\textbf{n}^{m}) \right)^{T}
+  \frac{\partial J}{\partial \textbf{n}^{m + 1}}
   $$
   $$
-  \textbf{s}^{m} = 
+  \textbf{s}^{m} =
   \textbf{D}^m (\textbf{n}^{m}) \left( \textbf{W}^{m + 1} \right)^{T}
-  \frac{\partial J}{\partial \textbf{n}^{m + 1}} 
+  \frac{\partial J}{\partial \textbf{n}^{m + 1}}
   $$
   $$
-  \textbf{s}^{m} = 
+  \textbf{s}^{m} =
   \textbf{D}^m (\textbf{n}^{m}) \left( \textbf{W}^{m + 1} \right)^{T}
   \textbf{s}^{m+1}
   $$
 
   From this expression we can see that \( \textbf{s}^m \) depends on \(
   \textbf{s}^{m+1} \) and so on. So we are sending the sensitivites backwards
-  in the network. This is why it is called <b>backpropogation</b>. 
+  in the network. This is why it is called <b>backpropogation</b>.
 </p>
 
 <p>
@@ -216,8 +216,8 @@ Where we have:
   We can just consider this to be the base case for our recursive relation
   where the backpropogation starts.
   $$
-  s_{i}^{M} = \frac{\partial J}{\partial n_{i}^{M}} = 
-  \frac{ \partial \left( \sum_{j=1}^{S^M} (t_j - a_j)^2 \right)}{\partial n_{i}^{M}} 
+  s_{i}^{M} = \frac{\partial J}{\partial n_{i}^{M}} =
+  \frac{ \partial \left( \sum_{j=1}^{S^M} (t_j - a_j)^2 \right)}{\partial n_{i}^{M}}
   =
   -2(t_j-a_j)\frac{\partial a_i}{\partial n_{i}^{M}}
   $$
@@ -231,5 +231,3 @@ Where we have:
   (\textbf{t}-\textbf{a})  
   $$
 </p>
-
-
