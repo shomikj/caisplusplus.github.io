@@ -55,13 +55,13 @@ comments: false
    first in order to avoid any conflicts during the Anaconda setup.
 2. Check that anaconda is installed by running in your terminal <code class='language-bash'>conda info</code>
 3. Create your conda environment. This will specify a certain version of Python to use, and will act as separated container (apart from your root installation) for all of your Python packages to exist. Run <code
-   class='language-bash'>conda create -n tfenv python=3.5</code> in your
+   class='language-bash'>conda create -n caispp python=3.5</code> in your
    terminal. This command specifies to use python 3.5 for our virtual environment,
-   and names our environment 'tfenv'.
+   and names our environment 'caispp'.
 4. Activate your environment. This tells your terminal session to use the
    version of Python and the packages in the conda environment. This is done
-   through <code class='language-bash'>activate tfenv</code> on Windows or
-   <code class='language-bash'>source activate tfenv</code> on Unix systems.
+   through <code class='language-bash'>activate caispp</code> on Windows or
+   <code class='language-bash'>source activate caispp</code> on Unix systems.
    You should see your prompt change with the name of the environment to the
    left of the input line. 
 5. Make sure that **pip** is installed by running <code class='language-bash'>pip
