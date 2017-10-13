@@ -1,7 +1,7 @@
 ---
 layout: post
 published: true
-title: "Lesson 7 Supplemental Material"
+title: "Lesson 8 Supplemental Material"
 headline: ""
 mathjax: true
 featured: false
