@@ -164,13 +164,18 @@ Where we have:
 
   $$
   \frac{\partial n_{i}^{m+1}}{\partial n_{j}^{m}} = w_{i,j}^{m} \frac{\partial
-    f^{m}(n_{j}^{m})}{\partial n_{j}^{m}} = w_{i,j}^{m} D^m(n_{j}^{m})
+    f^{m}(n_{j}^{m})}{\partial n_{j}^{m}} 
   $$
 
-  Where we have \( \frac{\partial f^{m}(n_{j}^{m})}{\partial n_{j}^{m}} =
-  D^m(n_{j}^{m}) \) just to make the notation look easier. Note that \(
-  d^m(n_j^m) \) is evaluating the derivative of \( f^m \) for the value \(
-  n_j^m \). Doing this is easy for computers.
+  Writting this in vector notation we get the following:
+  $$
+  \frac{\partial n_{i}^{m+1}}{\partial n_{j}^{m}} = \textbf{W}^m * 
+  \textbf{D}^m(\textbf{n}^m)
+  $$
+
+  Where we have \( \textbf{D}^m(\textbf{n}^m) \) be the diagonalized square
+  matrix whose diagonal elements are \( \frac{\partial
+    f^{m}(n_{j}^{m})}{\partial n_{j}^{m}} \)
 </p>
 
 <p>
@@ -222,12 +227,11 @@ Where we have:
   -2(t_j-a_j)\frac{\partial a_i}{\partial n_{i}^{M}}
   $$
   $$
-  s_{i}^{M} = -2(t_j-a_j)\frac{\partial f^{M}(n_i^M)}{\partial n_{i}^{M}} =
-  -2(t_j-a_j)d^{M}(n_i^M)
+  s_{i}^{M} = -2(t_j-a_j) \frac{\partial f^{M}(n_i^M)}{\partial n_{i}^{M}}
   $$
   Or expressed in matrix form.
   $$
-  \textbf{s}^{M} = -2d^{M}(\textbf{n}^M)
+  \textbf{s}^{M} = -2 \nabla f^{M}(\textbf{n}^M)
   (\textbf{t}-\textbf{a})  
   $$
 </p>
