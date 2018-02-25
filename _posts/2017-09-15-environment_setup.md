@@ -56,7 +56,7 @@ comments: true
 2. Check that anaconda is installed by running in your terminal <code class='language-bash'>conda info</code>
 3. Create your conda environment. This will specify a certain version of Python to use, and will act as separated container (apart from your root installation) for all of your Python packages to exist. Run <code
    class='language-bash'>conda create -n caispp python=3.5</code> in your
-   terminal. This command specifies to use python 3.5 for our virtual environment,
+   terminal. This command specifies to use Python 3.5 for our virtual environment,
    and names our environment 'caispp'.
 4. Activate your environment. This tells your terminal session to use the
    version of Python and the packages in the conda environment. This is done
@@ -73,12 +73,13 @@ comments: true
    the command:
    <code class='language-bash'>python</code>. When in the Python instance, import TensorFlow using: <code class='language-python'>import tensorflow as tf</code>. At this point,
    you might see some warning logs or other messages, but as long as it didn't
-   give an error, you are good to go!
-8. Install **scikit-learn**. Scikit-learn is on `conda`, so we just need to run: <code class='language-bash'>conda install scikit-learn</code>. Once again, test what we just installed. Create another python instance in terminal, and try importing the package: <code class='language-python'>import
-   sklearn</code>.
+   give an error, you are good to go! You can now exit out of Python by entering `ctrl-d` or `ctrl-c`. (Oome machines use one or the other, so try both.)
+8. Install **scikit-learn**. Scikit-learn is on `conda`, so we just need to enter into the command line: <code class='language-bash'>conda install scikit-learn</code>. Once again, test what we just installed. Create another Python instance in terminal, and try importing the package: <code class='language-python'>import sklearn</code>.
 9. NumPy should have been installed as a dependency of the other packages, but it may be a good idea to
-   ensure that numpy is also installed and working. Go ahead and launch another python instance and
-   type the following code: <code class='language-python'>import numpy as np</code>.
+   ensure that numpy is also installed and working. Go ahead and launch another Python instance and
+   type the following code: <code class='language-python'>import numpy as np</code>. Again, if you didn't get an error, then that means numpy was installed correctly.
+10. Final installations: exit out of your Python instance, and run these commands into the command line: <code class='language-bash'>conda install nb_conda</code> (to make our conda environment compatible with [Jupyter Notebooks](http://jupyter.org/)), <code class='language-bash'>pip install matplotlib</code> (a plotting library for Python), <code class='language-bash'>pip install pandas</code> (a data table library), and <code class='language-bash'>pip install keras</code>. **Keras** is a high-level deep learning library that sits on top of Tensorflow, and makes it significantly easier to write your own neural networks in just a couple lines of code.
+11. Before we start writing some code, let's restart our `conda` environment so that we can be sure that all the installations are complete: <code class='language-bash'>source deactivate caispp</code> (to deactivate our environment), and then <code class='language-bash'>source activate caispp</code> (to reactivate it).
 
 
 <p>
