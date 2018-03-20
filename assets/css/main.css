@@ -8,6 +8,80 @@
 */
 
 
+/* Custom Styles */
+	
+
+
+
+	/* Project images */
+	.project_image_wrap {
+		border: solid, 1px;
+
+	}
+	
+	.project_image_wrap:hover .text_over_image {
+		visibility: visible;
+		cursor: pointer;
+
+	}
+
+	.project_image_wrap:hover .project_image {
+		opacity: 0.15;
+		cursor: pointer;
+	}
+
+	.text_over_image {
+
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		
+		visibility: hidden;
+		transform: translate(-50%, -50%);
+	}
+
+	/* Modal */
+	.modal {
+		display: none; /* Hidden by default */
+    	position: fixed; /* Stay in place */
+    	z-index: 1; /* Sit on top */
+    	padding-top: 10%; /* Location of the box */
+    	left: 0;
+    	top: 0;
+    	width: 100%; /* Full width */
+    	height: 100%; /* Full height */
+    	overflow: auto; /* Enable scroll if needed */
+    	background-color: rgb(0,0,0); /* Fallback color */
+    	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+	}
+
+	/* Modal Content */
+	.modal-content {
+	    background-color: #fefefe;
+	    margin: auto;
+	    padding: 20px;
+	    border: 1px solid #888;
+	    width: 80%;
+	}
+
+	/* The Close Button */
+	.close {
+	    color: #aaaaaa;
+	    float: right;
+	    font-size: 28px;
+	    font-weight: bold;
+	}
+
+	.close:hover,
+	.close:focus {
+	    color: #000;
+	    text-decoration: none;
+	    cursor: pointer;
+	}
+	
+
+
+
 /* Reset */
 
 	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {

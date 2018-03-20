@@ -4,6 +4,7 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+
 (function($) {
 
 	skel
@@ -98,3 +99,34 @@
 	});
 
 })(jQuery);
+
+//Getting the modal set up:
+
+// Get the image-div that opens the modal
+var btn = document.getElementsByClassName("project_image_wrap");
+console.log(btn.length);
+
+for (var i = 0; i < btn.length; i++) {
+	var thisBtn = btn[i];
+	thisBtn.addEventListener("click", function() {
+		var modal = document.getElementById(this.dataset.modal);
+		modal.style.display = "block";
+
+		var span = document.getElementById(this.dataset.span);
+
+		span.onclick = function() {
+			modal.style.display = "none";
+		}
+
+		// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function(event) {
+		    if (event.target == modal) {
+		        modal.style.display = "none";
+		    }
+		}
+
+	}, false);
+
+}
+
+
