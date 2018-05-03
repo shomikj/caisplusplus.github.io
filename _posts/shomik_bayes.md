@@ -10,14 +10,6 @@ comments: true
 
 ### Table of Contents
 0. [Introduction](#introduction)
-1. [Gradient Descent](#gd)
-2. [Backpropagation](#bp)
-3. [Optimization in Practice](#opt)
-5. [Overfitting and Regularization](#reg)
-
-
-### Table of Contents
-0. [Introduction](#introduction)
 1. [Bayes' Theorem](#bt)
 2. [Naive Bayes Classifier](#nbc)
 3. [Example: Text Classification](#ex)
@@ -32,7 +24,7 @@ In a classification problem, we are given certain features/attributes about our 
 
 In probability theory and statistics, [**Bayes' Theorem**](https://en.wikipedia.org/wiki/Bayes%27_theorem) is a useful formula for working with conditional probabilities:
 
-$$\mathbb{P}(A | B) = \frac{\mathbb{P}(B | A) \times \mathbb{P}(A)}{\mathbb{P}(B)} $$
+$$\mathbb{P}(A | B) = \frac{\mathbb{P}(B | A) \times \mathbb{P}(A)}{\mathbb{P}(B)}$$
 
 where $A$ and $B$ are events and $\mathbb{P}(B) \neq 0$. 
 
